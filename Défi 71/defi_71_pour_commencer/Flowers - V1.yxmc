@@ -1,0 +1,929 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="486" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Target_Position actuelle" selected="True" rename="Target_Position actuelle" input="Target_" />
+                <SelectField field="Source_Lieu commande" selected="True" rename="Point actuel" input="Source_" />
+                <SelectField field="Source_Centroid" selected="True" rename="Position actuelle" input="Source_" />
+                <SelectField field="Source_Position actuelle" selected="True" rename="Source_Position actuelle" input="Source_" />
+                <SelectField field="Source_DistanceMiles" selected="False" rename="Source_DistanceMiles" input="Source_" />
+                <SelectField field="Source_Statut" selected="True" rename="Source_Statut" input="Source_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Target_Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Source_Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="750" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Target_Position actuelle" selected="False" />
+            <SelectField field="Source_Position actuelle" selected="False" />
+            <SelectField field="Source_DistanceMiles" selected="True" rename="Miles" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1038" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="Livraison" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Livraison = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="90" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>IterativeOutput</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1530" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Data</Name>
+          <Abbrev>D</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>D Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1134" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Livraison] &lt;= 60</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Livraison] &lt;= 60</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1338" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Premier 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="402" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Premier 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Point actuel" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="294" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1036">
+            <Field field="DistanceMiles" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DistanceMiles - Croissant</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="846" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" field="DistanceMiles" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>On recalcule la distance entre le prochain point et le point actuel pour trouver le prochain point le plus proche</AnnotationText>
+          <DefaultAnnotationText><![CDATA[DistanceMiles = ST_Distance([Centroid],[Position actuelle],"Mi")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="1242" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Skip</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Ignorer premier 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1326" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Lieu commande" selected="True" />
+            <SelectField field="Centroid" selected="True" />
+            <SelectField field="Point actuel" selected="True" />
+            <SelectField field="Position actuelle" selected="True" />
+            <SelectField field="DistanceMiles" selected="True" />
+            <SelectField field="Livraison" selected="False" />
+            <SelectField field="Miles" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>On supprime la colonne d'itération pour rester conforme à la structure de l'input d'entrée</AnnotationText>
+          <DefaultAnnotationText>On supprime la colonne d'itération pour rester conforme à la structure de l'input d'entrée</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1434" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Point actuel" selected="True" />
+            <SelectField field="Position actuelle" selected="True" />
+            <SelectField field="Lieu commande" selected="True" />
+            <SelectField field="Centroid" selected="True" />
+            <SelectField field="DistanceMiles" selected="True" />
+            <SelectField field="Livraison" selected="True" />
+            <SelectField field="Statut" selected="True" />
+            <SelectField field="Miles" selected="True" />
+            <SelectField field="Source_Statut" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Livraison" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="402" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Skip</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Ignorer premier 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="942" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1036">
+            <Field field="DistanceMiles" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DistanceMiles - Croissant</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="Formula: ST_Distance([Centroid],[Position actuelle],&quot;Mi&quot;)" type="Double" />
+            <Field name="Point actuel" size="17" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>IterativeInput</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="30" />
+              <Fields>
+                <Field name="Lieu commande" />
+                <Field name="Centroid" />
+                <Field name="Point actuel" />
+                <Field name="Position actuelle" />
+                <Field name="DistanceMiles" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Michelle Collins</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.785565, 33.038739 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>1.00060213721985</c>
+                </r>
+                <r>
+                  <c>Victor Russell</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.793911, 33.058678 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>1.89410341579126</c>
+                </r>
+                <r>
+                  <c>Ruby Perez</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.785794, 33.067674 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>2.07449086419058</c>
+                </r>
+                <r>
+                  <c>Elizabeth Perry</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.746057, 33.017034 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>2.12434927929825</c>
+                </r>
+                <r>
+                  <c>Ronald Moore</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.722056, 33.045883 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>2.71013798365016</c>
+                </r>
+                <r>
+                  <c>Lana Phelps</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.781208, 32.992798 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>3.43078333180039</c>
+                </r>
+                <r>
+                  <c>Geraldine Rose</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.773012, 32.985329 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>3.87604032883702</c>
+                </r>
+                <r>
+                  <c>Lillian Cooper</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.837049, 33.035771 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>3.98341356715864</c>
+                </r>
+                <r>
+                  <c>Jenny Park</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.746514, 32.978799 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.5030800685466</c>
+                </r>
+                <r>
+                  <c>Roger Barnes</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.783684, 33.106466 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.58208752004503</c>
+                </r>
+                <r>
+                  <c>Joyce Wallace</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.764443, 32.972982 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.72607629487148</c>
+                </r>
+                <r>
+                  <c>Eric Sanchez</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.828334, 33.087968 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.72620320015</c>
+                </r>
+                <r>
+                  <c>Jeffrey Morris</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.818863, 33.095446 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.7367812208061</c>
+                </r>
+                <r>
+                  <c>Lawrence Flores</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.848524, 33.058080 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.77079540198302</c>
+                </r>
+                <r>
+                  <c>Brooke Alvarado</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.766663, 32.970654 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>4.88202355324104</c>
+                </r>
+                <r>
+                  <c>Jack Huff</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.794753, 32.965937 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.42301304525103</c>
+                </r>
+                <r>
+                  <c>Benny Nash</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.862647, 33.026275 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.54534853748504</c>
+                </r>
+                <r>
+                  <c>Phillip Morris</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.822985, 33.107801 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.56644637226221</c>
+                </r>
+                <r>
+                  <c>Jane Fletcher</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.756068, 32.960728 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.61306850074988</c>
+                </r>
+                <r>
+                  <c>Jesse Patterson</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.702594, 33.101969 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.66598443161288</c>
+                </r>
+                <r>
+                  <c>Carlton Todd</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.803766, 32.962993 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.78133974666022</c>
+                </r>
+                <r>
+                  <c>Justin Richardson</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.867340, 33.054626 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.79095582634114</c>
+                </r>
+                <r>
+                  <c>Doris Robinson</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.830038, 33.108728 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>5.85787620407386</c>
+                </r>
+                <r>
+                  <c>Carl Henderson</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.822563, 33.121846 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.37768102006335</c>
+                </r>
+                <r>
+                  <c>Ann Stewart</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.842778, 33.110351 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.41550983789</c>
+                </r>
+                <r>
+                  <c>Margaret Lee</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.784485, 33.134365 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.48998107036289</c>
+                </r>
+                <r>
+                  <c>Miriam Mack</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.815672, 32.955994 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.49415790300719</c>
+                </r>
+                <r>
+                  <c>Felipe Klein</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.825086, 32.957871 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.62842349660783</c>
+                </r>
+                <r>
+                  <c>Maggie Edwards</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.741776, 32.947873 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.6377641285396</c>
+                </r>
+                <r>
+                  <c>Clifton Barker</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.850279, 32.972990 ] }</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>{ "type": "Point", "coordinates": [ -96.768559, 33.041334 ] }</c>
+                  <c>6.68348788362654</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Input</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Lieu commande" size="17" source="TextInput:" type="String" />
+            <Field name="Centroid" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="Point actuel" size="19" source="TextInput:" type="String" />
+            <Field name="Position actuelle" size="2147483647" source="TextInput:" type="SpatialObj" />
+            <Field name="DistanceMiles" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="5" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="5" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="36" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Sortie de macro (19)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Sortie de macro (22)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Entrée de macro (45)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Flowers - V1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b2b75a8b-b645-4f4f-9858-cf409e191daf" />
+      <Telemetry>
+        <PreviousWorkflowId value="32ff5b65-1904-4c49-997d-4f9650609029" />
+        <OriginWorkflowId value="b2b75a8b-b645-4f4f-9858-cf409e191daf" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Onglet (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Sortie de macro (19)</Description>
+              <Name>Sortie de macro (19)</Name>
+              <ToolId value="19" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Sortie de macro (22)</Description>
+              <Name>Sortie de macro (22)</Name>
+              <ToolId value="22" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Entrée de macro (45)</Name>
+              <ToolId value="45" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="35" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input>IterativeInput</Input>
+        <Output>IterativeOutput</Output>
+        <IterationLimit value="70" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="19" Selected="True" />
+        <Tool ToolId="22" Selected="True" />
+        <Tool ToolId="45" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

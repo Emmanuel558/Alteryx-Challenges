@@ -1,0 +1,1581 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>IterationInput</Name>
+          <Abbrev>I</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="Nom" />
+                <Field name="Lat" />
+                <Field name="Long" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Position de départ</AnnotationText>
+          <DefaultAnnotationText>Position de départ
+I Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="330" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_Nom" selected="True" rename="Départ" input="Source_" />
+                <SelectField field="Source_Lat" selected="True" rename="Source_Lat" input="Source_" />
+                <SelectField field="Source_Long" selected="True" rename="Source_Long" input="Source_" />
+                <SelectField field="Target_Départ" selected="True" rename="Target_Départ" input="Target_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Date de la commande" source="TextInput:" type="Date" />
+            <Field name="Lat du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Long du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Montant de la commande" source="TextInput:" type="Double" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" field="Points de livraison" size="536870911" type="SpatialObj" />
+            <FormulaField expression="ST_CreatePoint([Long],[Lat])" field="Point le plus proche" size="536870911" type="SpatialObj" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Points de livraison = ST_CreatePoint([Long du point de livraison],[Lat du point ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Date de la commande" source="TextInput:" type="Date" />
+            <Field name="Lat du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Long du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Montant de la commande" source="TextInput:" type="Double" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+            <Field name="Points de livraison" size="2147483647" source="Formula: ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" type="SpatialObj" />
+            <Field name="Point le plus proche" size="2147483647" source="Formula: ST_CreatePoint([Long],[Lat])" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="558" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date de la commande" selected="False" />
+            <SelectField field="Lat du point de livraison" selected="False" />
+            <SelectField field="Long du point de livraison" selected="False" />
+            <SelectField field="Montant de la commande" selected="False" />
+            <SelectField field="Lat" selected="False" />
+            <SelectField field="Long" selected="False" />
+            <SelectField field="Départ" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+            <Field name="Points de livraison" size="2147483647" source="Formula: ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" type="SpatialObj" />
+            <Field name="Point le plus proche" size="2147483647" source="Formula: ST_CreatePoint([Long],[Lat])" type="SpatialObj" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ST_Distance([Points de livraison],[Point le plus proche],&quot;Mi&quot;)" field="Distance avec le premier point" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Distance avec le premier point = ST_Distance([Points de livraison],[Point le plu...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+            <Field name="Points de livraison" size="2147483647" source="Formula: ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" type="SpatialObj" />
+            <Field name="Point le plus proche" size="2147483647" source="Formula: ST_CreatePoint([Long],[Lat])" type="SpatialObj" />
+            <Field name="Distance avec le premier point" source="Formula: ST_Distance([Points de livraison],[Point le plus proche],&quot;Mi&quot;)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="762" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1036">
+            <Field field="Distance avec le premier point" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Distance avec le premier point - Croissant</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+            <Field name="Points de livraison" size="2147483647" source="Formula: ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" type="SpatialObj" />
+            <Field name="Point le plus proche" size="2147483647" source="Formula: ST_CreatePoint([Long],[Lat])" type="SpatialObj" />
+            <Field name="Distance avec le premier point" source="Formula: ST_Distance([Points de livraison],[Point le plus proche],&quot;Mi&quot;)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="66" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>IterationOutput</Name>
+          <Abbrev>I</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>I Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="846" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>First</Mode>
+          <N>1</N>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Premier 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Target_Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Source_Lat" source="TextInput:" type="Double" />
+            <Field name="Source_Long" source="TextInput:" type="Double" />
+            <Field name="Points de livraison" size="2147483647" source="Formula: ST_CreatePoint([Long du point de livraison],[Lat du point de livraison])" type="SpatialObj" />
+            <Field name="Point le plus proche" size="2147483647" source="Formula: ST_CreatePoint([Long],[Lat])" type="SpatialObj" />
+            <Field name="Distance avec le premier point" source="Formula: ST_Distance([Points de livraison],[Point le plus proche],&quot;Mi&quot;)" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Positions</Name>
+          <Abbrev>D</Abbrev>
+          <ShowFieldMap value="False" />
+          <Optional value="False" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="86" />
+              <Fields>
+                <Field name="Nom" />
+                <Field name="Date de la commande" />
+                <Field name="Lat du point de livraison" />
+                <Field name="Long du point de livraison" />
+                <Field name="Montant de la commande" />
+                <Field name="Départ" />
+                <Field name="Lat" />
+                <Field name="Long" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>Alfred Conner</c>
+                  <c>2021-05-03</c>
+                  <c>33.00206537</c>
+                  <c>-96.88264232</c>
+                  <c>87.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Ann Stewart</c>
+                  <c>2021-05-03</c>
+                  <c>33.11035103</c>
+                  <c>-96.84277844</c>
+                  <c>95.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Anna Alexander</c>
+                  <c>2021-05-03</c>
+                  <c>33.20087372</c>
+                  <c>-96.86660191</c>
+                  <c>88.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Arthur Ferguson</c>
+                  <c>2021-05-03</c>
+                  <c>32.93297875</c>
+                  <c>-96.80364379</c>
+                  <c>76.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Benny Nash</c>
+                  <c>2021-05-03</c>
+                  <c>33.0262752</c>
+                  <c>-96.86264717</c>
+                  <c>81.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Bobby Patterson</c>
+                  <c>2021-05-03</c>
+                  <c>33.16165276</c>
+                  <c>-96.86710323</c>
+                  <c>84.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Bonnie Stewart</c>
+                  <c>2021-05-02</c>
+                  <c>33.17724796</c>
+                  <c>-96.92736974</c>
+                  <c>93.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Brooke Alvarado</c>
+                  <c>2021-05-03</c>
+                  <c>32.97065432</c>
+                  <c>-96.76666271</c>
+                  <c>78.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Carl Henderson</c>
+                  <c>2021-05-03</c>
+                  <c>33.1218462</c>
+                  <c>-96.82256269</c>
+                  <c>97.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Carlton Todd</c>
+                  <c>2021-05-03</c>
+                  <c>32.96299285</c>
+                  <c>-96.80376645</c>
+                  <c>71.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Cecil Mitchell</c>
+                  <c>2021-05-02</c>
+                  <c>32.99101044</c>
+                  <c>-96.92817759</c>
+                  <c>81.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Clifton Barker</c>
+                  <c>2021-05-03</c>
+                  <c>32.97299038</c>
+                  <c>-96.85027927</c>
+                  <c>78.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Cynthia Evans</c>
+                  <c>2021-05-02</c>
+                  <c>33.17366706</c>
+                  <c>-96.92455239</c>
+                  <c>57.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Deborah Sanders</c>
+                  <c>2021-05-03</c>
+                  <c>33.14983962</c>
+                  <c>-96.77087345</c>
+                  <c>77.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Denise Foster</c>
+                  <c>2021-05-03</c>
+                  <c>33.20930351</c>
+                  <c>-96.85463603</c>
+                  <c>78.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Doris Robinson</c>
+                  <c>2021-05-03</c>
+                  <c>33.10872815</c>
+                  <c>-96.83003833</c>
+                  <c>99.8</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Douglas Rodriguez</c>
+                  <c>2021-05-03</c>
+                  <c>33.11121008</c>
+                  <c>-96.88793239</c>
+                  <c>61.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Elizabeth Perry</c>
+                  <c>2021-05-04</c>
+                  <c>33.0170344</c>
+                  <c>-96.74605726</c>
+                  <c>55.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Eric Sanchez</c>
+                  <c>2021-05-03</c>
+                  <c>33.0879679</c>
+                  <c>-96.82833374</c>
+                  <c>66.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Eugene Alexander</c>
+                  <c>2021-05-02</c>
+                  <c>33.16832589</c>
+                  <c>-96.98094447</c>
+                  <c>58.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Felipe Klein</c>
+                  <c>2021-05-03</c>
+                  <c>32.95787098</c>
+                  <c>-96.82508647</c>
+                  <c>75.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Gary Ward</c>
+                  <c>2021-05-02</c>
+                  <c>33.21543915</c>
+                  <c>-96.91583268</c>
+                  <c>85.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>George Bell</c>
+                  <c>2021-05-07</c>
+                  <c>33.16144419</c>
+                  <c>-96.69980124</c>
+                  <c>63.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Geraldine Rose</c>
+                  <c>2021-05-03</c>
+                  <c>32.9853286</c>
+                  <c>-96.77301165</c>
+                  <c>85.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jack Huff</c>
+                  <c>2021-05-03</c>
+                  <c>32.96593725</c>
+                  <c>-96.79475316</c>
+                  <c>93.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jane Fletcher</c>
+                  <c>2021-05-04</c>
+                  <c>32.96072791</c>
+                  <c>-96.75606785</c>
+                  <c>54.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Janis Jimenez</c>
+                  <c>2021-05-04</c>
+                  <c>32.93295654</c>
+                  <c>-96.76136797</c>
+                  <c>64.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jason Russell</c>
+                  <c>2021-05-04</c>
+                  <c>33.16169346</c>
+                  <c>-96.75195196</c>
+                  <c>94.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jeffrey Morris</c>
+                  <c>2021-05-03</c>
+                  <c>33.09544559</c>
+                  <c>-96.81886306</c>
+                  <c>59.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jennie Ray</c>
+                  <c>2021-05-02</c>
+                  <c>33.00845785</c>
+                  <c>-96.90157695</c>
+                  <c>76.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jenny Park</c>
+                  <c>2021-05-04</c>
+                  <c>32.97879911</c>
+                  <c>-96.74651443</c>
+                  <c>83.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jeremy Carter</c>
+                  <c>2021-05-07</c>
+                  <c>33.20303405</c>
+                  <c>-96.67361144</c>
+                  <c>77.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jeremy Thompson</c>
+                  <c>2021-05-02</c>
+                  <c>33.21091374</c>
+                  <c>-96.9328591</c>
+                  <c>87.8</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jerry Howard</c>
+                  <c>2021-05-05</c>
+                  <c>33.22926013</c>
+                  <c>-96.7270706</c>
+                  <c>56</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jerry Johnson</c>
+                  <c>2021-05-02</c>
+                  <c>33.21683964</c>
+                  <c>-96.91930285</c>
+                  <c>73.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jesse Patterson</c>
+                  <c>2021-05-06</c>
+                  <c>33.10196881</c>
+                  <c>-96.70259383</c>
+                  <c>51</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Jimmy Green</c>
+                  <c>2021-05-03</c>
+                  <c>33.17923454</c>
+                  <c>-96.87394789</c>
+                  <c>65.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Johnny Lewis</c>
+                  <c>2021-05-03</c>
+                  <c>33.10458718</c>
+                  <c>-96.89726275</c>
+                  <c>86</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Johnny Sanchez</c>
+                  <c>2021-05-03</c>
+                  <c>33.21599616</c>
+                  <c>-96.8075506</c>
+                  <c>52.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Joseph Barnes</c>
+                  <c>2021-05-03</c>
+                  <c>33.13655906</c>
+                  <c>-96.80857965</c>
+                  <c>89.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Joyce Wallace</c>
+                  <c>2021-05-03</c>
+                  <c>32.97298184</c>
+                  <c>-96.76444284</c>
+                  <c>63</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Justin Richardson</c>
+                  <c>2021-05-03</c>
+                  <c>33.0546264</c>
+                  <c>-96.86734023</c>
+                  <c>72.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Kevin Patterson</c>
+                  <c>2021-05-03</c>
+                  <c>33.15213069</c>
+                  <c>-96.79019466</c>
+                  <c>98.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Kristen Morales</c>
+                  <c>2021-05-03</c>
+                  <c>32.9333638</c>
+                  <c>-96.8409622</c>
+                  <c>62.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Lamar Pena</c>
+                  <c>2021-05-02</c>
+                  <c>32.94793578</c>
+                  <c>-96.91737881</c>
+                  <c>59.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Lana Phelps</c>
+                  <c>2021-05-03</c>
+                  <c>32.9927975</c>
+                  <c>-96.78120814</c>
+                  <c>83.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Larry King</c>
+                  <c>2021-05-03</c>
+                  <c>33.09452902</c>
+                  <c>-96.87455415</c>
+                  <c>82.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Lawrence Flores</c>
+                  <c>2021-05-03</c>
+                  <c>33.05808001</c>
+                  <c>-96.84852413</c>
+                  <c>95.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Lillian Cooper</c>
+                  <c>2021-05-03</c>
+                  <c>33.03577099</c>
+                  <c>-96.83704937</c>
+                  <c>58.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Mabel Matthews</c>
+                  <c>2021-05-02</c>
+                  <c>33.00938911</c>
+                  <c>-96.91447494</c>
+                  <c>52</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Maggie Edwards</c>
+                  <c>2021-05-04</c>
+                  <c>32.9478728</c>
+                  <c>-96.7417763</c>
+                  <c>61.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Margaret Lee</c>
+                  <c>2021-05-03</c>
+                  <c>33.13436466</c>
+                  <c>-96.78448517</c>
+                  <c>87.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Marsha Jennings</c>
+                  <c>2021-05-03</c>
+                  <c>32.9320961</c>
+                  <c>-96.86644492</c>
+                  <c>66.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Martha Watson</c>
+                  <c>2021-05-03</c>
+                  <c>33.22217609</c>
+                  <c>-96.85312943</c>
+                  <c>87.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Mary Bailey</c>
+                  <c>2021-05-03</c>
+                  <c>33.17850038</c>
+                  <c>-96.89637049</c>
+                  <c>69.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Michelle Collins</c>
+                  <c>2021-05-03</c>
+                  <c>33.0387393</c>
+                  <c>-96.78556471</c>
+                  <c>67</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Miranda Berry</c>
+                  <c>2021-05-02</c>
+                  <c>33.02504519</c>
+                  <c>-96.94366655</c>
+                  <c>82.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Miriam Mack</c>
+                  <c>2021-05-03</c>
+                  <c>32.95599445</c>
+                  <c>-96.81567228</c>
+                  <c>60.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Nicholas Allen</c>
+                  <c>2021-05-03</c>
+                  <c>33.16310537</c>
+                  <c>-96.81077109</c>
+                  <c>50.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Oliver Jordan</c>
+                  <c>2021-05-02</c>
+                  <c>33.01146018</c>
+                  <c>-96.89990622</c>
+                  <c>62.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Patrick Diaz</c>
+                  <c>2021-05-07</c>
+                  <c>33.20696315</c>
+                  <c>-96.68266146</c>
+                  <c>60.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Patrick Johnson</c>
+                  <c>2021-05-03</c>
+                  <c>33.16050013</c>
+                  <c>-96.79676127</c>
+                  <c>63.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Phil Lynch</c>
+                  <c>2021-05-03</c>
+                  <c>32.93286662</c>
+                  <c>-96.83453439</c>
+                  <c>91.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Phillip Morris</c>
+                  <c>2021-05-03</c>
+                  <c>33.10780075</c>
+                  <c>-96.82298459</c>
+                  <c>85.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Robert White</c>
+                  <c>2021-05-07</c>
+                  <c>33.19686117</c>
+                  <c>-96.6863349</c>
+                  <c>55</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Roger Barnes</c>
+                  <c>2021-05-03</c>
+                  <c>33.10646649</c>
+                  <c>-96.78368367</c>
+                  <c>98.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Roger Ross</c>
+                  <c>2021-05-03</c>
+                  <c>33.19576369</c>
+                  <c>-96.80490386</c>
+                  <c>54.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Ronald Moore</c>
+                  <c>2021-05-05</c>
+                  <c>33.04588264</c>
+                  <c>-96.72205581</c>
+                  <c>98.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Ruby Perez</c>
+                  <c>2021-05-03</c>
+                  <c>33.06767391</c>
+                  <c>-96.78579417</c>
+                  <c>77.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Russell Jenkins</c>
+                  <c>2021-05-03</c>
+                  <c>33.12383178</c>
+                  <c>-96.83156778</c>
+                  <c>86.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Russell Johnson</c>
+                  <c>2021-05-03</c>
+                  <c>33.14293969</c>
+                  <c>-96.77726568</c>
+                  <c>68.4</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Russell Patterson</c>
+                  <c>2021-05-05</c>
+                  <c>33.22632839</c>
+                  <c>-96.70295859</c>
+                  <c>76.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Sean Sanders</c>
+                  <c>2021-05-02</c>
+                  <c>33.1493823</c>
+                  <c>-96.90146855</c>
+                  <c>52.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Shawn Ramirez</c>
+                  <c>2021-05-03</c>
+                  <c>33.22956785</c>
+                  <c>-96.87117123</c>
+                  <c>84.8</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Tammy Lee</c>
+                  <c>2021-05-03</c>
+                  <c>33.15673483</c>
+                  <c>-96.88369404</c>
+                  <c>63.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Teresa Johnson</c>
+                  <c>2021-05-03</c>
+                  <c>33.09367602</c>
+                  <c>-96.88788098</c>
+                  <c>67.3</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Theresa Morris</c>
+                  <c>2021-05-02</c>
+                  <c>33.2014135</c>
+                  <c>-96.94534937</c>
+                  <c>67.6</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Tina Hill</c>
+                  <c>2021-05-03</c>
+                  <c>33.15994194</c>
+                  <c>-96.85873952</c>
+                  <c>85.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Todd Baker</c>
+                  <c>2021-05-02</c>
+                  <c>33.0574898</c>
+                  <c>-96.98313707</c>
+                  <c>88.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Todd Brown</c>
+                  <c>2021-05-07</c>
+                  <c>33.13617346</c>
+                  <c>-96.67997595</c>
+                  <c>73.7</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Todd Jackson</c>
+                  <c>2021-05-07</c>
+                  <c>33.2182337</c>
+                  <c>-96.68664829</c>
+                  <c>68.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Todd Watson</c>
+                  <c>2021-05-05</c>
+                  <c>33.17721301</c>
+                  <c>-96.70775668</c>
+                  <c>83.2</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Tommy Brooks</c>
+                  <c>2021-05-03</c>
+                  <c>32.93534109</c>
+                  <c>-96.76854995</c>
+                  <c>98.5</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Victor Russell</c>
+                  <c>2021-05-03</c>
+                  <c>33.05867752</c>
+                  <c>-96.79391065</c>
+                  <c>76</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Walter Price</c>
+                  <c>2021-05-03</c>
+                  <c>33.21068909</c>
+                  <c>-96.77693376</c>
+                  <c>58.9</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+                <r>
+                  <c>Willie Kelly</c>
+                  <c>2021-05-02</c>
+                  <c>32.99064845</c>
+                  <c>-96.89821068</c>
+                  <c>65.1</c>
+                  <c>Flora's Flower Shop</c>
+                  <c>33.041334</c>
+                  <c>-96.768559</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>D Input</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Date de la commande" source="TextInput:" type="Date" />
+            <Field name="Lat du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Long du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Montant de la commande" source="TextInput:" type="Double" />
+            <Field name="Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="942" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Target_Départ" selected="False" />
+            <SelectField field="Source_Lat" selected="True" rename="Lat" />
+            <SelectField field="Source_Long" selected="True" rename="Long" />
+            <SelectField field="Points de livraison" selected="False" />
+            <SelectField field="Point le plus proche" selected="False" />
+            <SelectField field="Distance avec le premier point" selected="False" />
+            <SelectField field="Tour" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="210" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Nom" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Nom" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Nom" selected="False" rename="Right_Nom" input="Right_" />
+                <SelectField field="Right_Lat" selected="False" rename="Right_Lat" input="Right_" />
+                <SelectField field="Right_Long" selected="False" rename="Right_Long" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Nom" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Nom" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Nom" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Date de la commande" source="TextInput:" type="Date" />
+            <Field name="Lat du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Long du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Montant de la commande" source="TextInput:" type="Double" />
+            <Field name="Départ" size="19" source="TextInput:" type="String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Nom" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Date de la commande" source="TextInput:" type="Date" />
+            <Field name="Lat du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Long du point de livraison" source="TextInput:" type="Double" />
+            <Field name="Montant de la commande" source="TextInput:" type="Double" />
+            <Field name="Départ" size="19" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Nom" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicSelect.DynamicSelect">
+        <Position x="1230" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Formula</Mode>
+          <Expression>[Name] in ("Nom","Lat","Long")</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicSelect" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1038" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.IterationNumber]+1" field="Tour" size="1" type="Byte" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Tour = [Engine.IterationNumber]+1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Tour" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1134" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Tour] &lt;= 30</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Tour] &lt;= 30</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Tour" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Nom" size="17" source="TextInput:" type="String" />
+            <Field name="Lat" source="TextInput:" type="Double" />
+            <Field name="Long" source="TextInput:" type="Double" />
+            <Field name="Tour" source="Formula: [Engine.IterationNumber]+1" type="Byte" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1302" y="354" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Data</Name>
+          <Abbrev>D</Abbrev>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>D Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="20" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="20" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Right" />
+      <Destination ToolID="4" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="True" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Entrée de macro (18)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Sortie de macro (27)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Flowers</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1877d7f6-27d6-4608-ad29-687fba8692a6" />
+      <Telemetry>
+        <PreviousWorkflowId value="4c393afe-2832-4378-83c2-29e53fbfd0f8" />
+        <OriginWorkflowId value="1877d7f6-27d6-4608-ad29-687fba8692a6" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+    <RuntimeProperties>
+      <Actions />
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Onglet (2)</Name>
+          <ToolId value="2" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Entrée de macro (3)</Name>
+              <ToolId value="3" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Sortie de macro (15)</Description>
+              <Name>Sortie de macro (15)</Name>
+              <ToolId value="15" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Entrée de macro (18)</Name>
+              <ToolId value="18" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Sortie de macro (27)</Description>
+              <Name>Sortie de macro (27)</Name>
+              <ToolId value="27" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <IterativeMacro>
+        <Input />
+        <Output />
+        <IterationLimit value="100" />
+        <LimitBehavior>Error</LimitBehavior>
+        <OutputMode>AllSame</OutputMode>
+      </IterativeMacro>
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="15" Selected="True" />
+        <Tool ToolId="27" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

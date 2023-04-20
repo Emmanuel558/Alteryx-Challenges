@@ -1,0 +1,2331 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="894" y="354" width="168" height="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Sortie
+
+
+
+
+
+]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="666" width="132" height="432" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Entrées
+
+
+
+
+
+]]></Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="990" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\egakosso\AppData\Local\Temp\Engine_14012_a15ef6496045412ead905dae7828eaad_\Engine_25012_9bc42d9a62ff455f966efbcc373d3398_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Rapport</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[Aucune carte de référence]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="324" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+          <BG_Image>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</BG_Image>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="438" y="66" width="468" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Défi hebdomadaire #25</Text>
+          <Font name="Microsoft Sans Serif" size="16.2" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="138" width="780" height="360" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[
+Selon le site de la Société Française d’Énergie Nucléaire, le nucléaire fournit 30 % de l’électricité de l’Union européenne. Si le sujet de la transition vers des énergies plus durable est d’actualité, cette semaine, le nucléaire est le sujet de notre défi.
+
+En utilisant les jeux de données fournis, générerez un rapport donnant un aperçu du haut niveau de la capacité nucléaire actuelle dans le monde.
+
+Utilisez les 4 fichiers contenant des données sur les réacteurs nucléaires pour créer un rapport comprenant les éléments suivants :
+
+- Une carte indiquant l'emplacement des réacteurs ayant un statut de : « Opérationnel », « En construction » ou « Prévu » (n'inclut que les réacteurs dont l'emplacement est déterminé)
+- Un tableau énumérant par pays :
+     - Le nombre de réacteurs opérationnels
+     - La capacité totale de ces réacteurs 
+     - Le type de réacteur opérationnel le plus courant (n'inclut que les réacteurs présentés dans la carte)
+
+
+Data Source: https://www.kaggle.com/marchman/geo-nuclear-data
+]]></Text>
+          <Font name="Microsoft Sans Serif" size="11.25" style="0" />
+          <TextColor name="Gray" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="25" />
+          <Fields>
+            <Field name="Type Code" />
+            <Field name="Type" />
+            <Field name="Description" />
+          </Fields>
+          <Data>
+            <r>
+              <c>1</c>
+              <c>ABWR</c>
+              <c>Advanced Boiling Water Reactor</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>APR</c>
+              <c>Advanced Power Reactor</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>APWR</c>
+              <c>Advanced Pressurised Water Reactor</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>AGR</c>
+              <c>Advanced Gas-cooled Reactor</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>BWR</c>
+              <c>Boiling Water Reactor</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>EPR</c>
+              <c>Evolutionary Power Reactor</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>FBR</c>
+              <c>Fast Breeder Reactor</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>GCR</c>
+              <c>Gas-Cooled Reactor</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>HTGR</c>
+              <c>High-Temperature Gas-cooled Reactor</c>
+            </r>
+            <r>
+              <c>10</c>
+              <c>HTR-PM</c>
+              <c>High Temperature Reactor - Pebble Module</c>
+            </r>
+            <r>
+              <c>11</c>
+              <c>HWGCR</c>
+              <c>Heavy Water Gas Cooled Reactor</c>
+            </r>
+            <r>
+              <c>12</c>
+              <c>HWLWR</c>
+              <c>Heavy Water Light Water Reactor</c>
+            </r>
+            <r>
+              <c>13</c>
+              <c>HWOCR</c>
+              <c>Heavy Water Organic Cooled Reactor</c>
+            </r>
+            <r>
+              <c>14</c>
+              <c>LFR</c>
+              <c>Lead-cooled Fast Reactor</c>
+            </r>
+            <r>
+              <c>15</c>
+              <c>LMFBR</c>
+              <c>Liquid Metal Fast Breeder Reactor</c>
+            </r>
+            <r>
+              <c>16</c>
+              <c>LMFR</c>
+              <c>Liquid Metal Fast Reactor</c>
+            </r>
+            <r>
+              <c>17</c>
+              <c>LWGR</c>
+              <c>Light Water Graphite Reactor</c>
+            </r>
+            <r>
+              <c>18</c>
+              <c>MSR</c>
+              <c>Molten Salt Reactor</c>
+            </r>
+            <r>
+              <c>19</c>
+              <c>OCR</c>
+              <c>Organic Cooled Reactor</c>
+            </r>
+            <r>
+              <c>20</c>
+              <c>PHWR</c>
+              <c>Pressurised Heavy Water Reactor</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>PWR</c>
+              <c>Pressurised Water Reactor</c>
+            </r>
+            <r>
+              <c>22</c>
+              <c>RBMK</c>
+              <c>High Power Channel-Type Reactor (Reaktor Bolshoy Moshchnosti Kanalniy)</c>
+            </r>
+            <r>
+              <c>23</c>
+              <c>SGR</c>
+              <c>Sodium-Graphite Reactor</c>
+            </r>
+            <r>
+              <c>24</c>
+              <c>SGHWR</c>
+              <c>Steam Generating Heavy Water Reactor</c>
+            </r>
+            <r>
+              <c>25</c>
+              <c>TWR</c>
+              <c>Traveling-Wave Reactor</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Type de réacteur</AnnotationText>
+          <DefaultAnnotationText>Reactor Type</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="10" />
+          <Fields>
+            <Field name="Statut Code" />
+            <Field name="Statut" />
+          </Fields>
+          <Data>
+            <r>
+              <c>0</c>
+              <c>Inconnu</c>
+            </r>
+            <r>
+              <c>1</c>
+              <c>Prévu</c>
+            </r>
+            <r>
+              <c>2</c>
+              <c>En construction</c>
+            </r>
+            <r>
+              <c>3</c>
+              <c>Opérationnel</c>
+            </r>
+            <r>
+              <c>4</c>
+              <c>Opération suspendue</c>
+            </r>
+            <r>
+              <c>5</c>
+              <c>Fermé</c>
+            </r>
+            <r>
+              <c>6</c>
+              <c>Non terminé</c>
+            </r>
+            <r>
+              <c>7</c>
+              <c>Jamais bâti</c>
+            </r>
+            <r>
+              <c>8</c>
+              <c>Opération suspendue</c>
+            </r>
+            <r>
+              <c>9</c>
+              <c>Construction annulée</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Recherche statut</AnnotationText>
+          <DefaultAnnotationText>Recherche statut</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="255" />
+          <Fields>
+            <Field name="Pays code" />
+            <Field name="Pays" />
+          </Fields>
+          <Data>
+            <r>
+              <c>AC</c>
+              <c>Ascension Island</c>
+            </r>
+            <r>
+              <c>AD</c>
+              <c>Andorra</c>
+            </r>
+            <r>
+              <c>AE</c>
+              <c>United Arab Emirates</c>
+            </r>
+            <r>
+              <c>AF</c>
+              <c>Afghanistan</c>
+            </r>
+            <r>
+              <c>AG</c>
+              <c>Antigua and Barbuda</c>
+            </r>
+            <r>
+              <c>AI</c>
+              <c>Anguilla</c>
+            </r>
+            <r>
+              <c>AL</c>
+              <c>Albania</c>
+            </r>
+            <r>
+              <c>AM</c>
+              <c>Armenia</c>
+            </r>
+            <r>
+              <c>AN</c>
+              <c>Netherlands Antilles</c>
+            </r>
+            <r>
+              <c>AO</c>
+              <c>Angola</c>
+            </r>
+            <r>
+              <c>AQ</c>
+              <c>Antarctica</c>
+            </r>
+            <r>
+              <c>AR</c>
+              <c>Argentina</c>
+            </r>
+            <r>
+              <c>AS</c>
+              <c>American Samoa</c>
+            </r>
+            <r>
+              <c>AT</c>
+              <c>Austria</c>
+            </r>
+            <r>
+              <c>AU</c>
+              <c>Australia</c>
+            </r>
+            <r>
+              <c>AW</c>
+              <c>Aruba</c>
+            </r>
+            <r>
+              <c>AX</c>
+              <c>Åland Islands</c>
+            </r>
+            <r>
+              <c>AZ</c>
+              <c>Azerbaijan</c>
+            </r>
+            <r>
+              <c>BA</c>
+              <c>Bosnia and Herzegovina</c>
+            </r>
+            <r>
+              <c>BB</c>
+              <c>Barbados</c>
+            </r>
+            <r>
+              <c>BD</c>
+              <c>Bangladesh</c>
+            </r>
+            <r>
+              <c>BE</c>
+              <c>Belgium</c>
+            </r>
+            <r>
+              <c>BF</c>
+              <c>Burkina Faso</c>
+            </r>
+            <r>
+              <c>BG</c>
+              <c>Bulgaria</c>
+            </r>
+            <r>
+              <c>BH</c>
+              <c>Bahrain</c>
+            </r>
+            <r>
+              <c>BI</c>
+              <c>Burundi</c>
+            </r>
+            <r>
+              <c>BJ</c>
+              <c>Benin</c>
+            </r>
+            <r>
+              <c>BL</c>
+              <c>Saint Barthélemy</c>
+            </r>
+            <r>
+              <c>BM</c>
+              <c>Bermuda</c>
+            </r>
+            <r>
+              <c>BN</c>
+              <c>Brunei Darussalem</c>
+            </r>
+            <r>
+              <c>BO</c>
+              <c>Bolivia</c>
+            </r>
+            <r>
+              <c>BQ</c>
+              <c>Bonaire, Sint Eustatius and Saba</c>
+            </r>
+            <r>
+              <c>BR</c>
+              <c>Brazil</c>
+            </r>
+            <r>
+              <c>BS</c>
+              <c>Bahamas</c>
+            </r>
+            <r>
+              <c>BT</c>
+              <c>Bhutan</c>
+            </r>
+            <r>
+              <c>BV</c>
+              <c>Bouvet Island</c>
+            </r>
+            <r>
+              <c>BW</c>
+              <c>Botswana</c>
+            </r>
+            <r>
+              <c>BY</c>
+              <c>Belarus</c>
+            </r>
+            <r>
+              <c>BZ</c>
+              <c>Belize</c>
+            </r>
+            <r>
+              <c>CA</c>
+              <c>Canada</c>
+            </r>
+            <r>
+              <c>CC</c>
+              <c>Cocos (Keeling) Islands</c>
+            </r>
+            <r>
+              <c>CD</c>
+              <c>Congo, The Democratic Republic of The</c>
+            </r>
+            <r>
+              <c>CF</c>
+              <c>Central African Republic</c>
+            </r>
+            <r>
+              <c>CG</c>
+              <c>Congo</c>
+            </r>
+            <r>
+              <c>CH</c>
+              <c>Switzerland</c>
+            </r>
+            <r>
+              <c>CI</c>
+              <c>Cote d'Ivoire</c>
+            </r>
+            <r>
+              <c>CK</c>
+              <c>Cook Islands</c>
+            </r>
+            <r>
+              <c>CL</c>
+              <c>Chile</c>
+            </r>
+            <r>
+              <c>CM</c>
+              <c>Cameroon</c>
+            </r>
+            <r>
+              <c>CN</c>
+              <c>People's Republic of China</c>
+            </r>
+            <r>
+              <c>CO</c>
+              <c>Colombia</c>
+            </r>
+            <r>
+              <c>CP</c>
+              <c>Clipperton Island</c>
+            </r>
+            <r>
+              <c>CR</c>
+              <c>Costa Rica</c>
+            </r>
+            <r>
+              <c>CS</c>
+              <c>Serbia and Montenegro</c>
+            </r>
+            <r>
+              <c>CU</c>
+              <c>Cuba</c>
+            </r>
+            <r>
+              <c>CV</c>
+              <c>Cabo Verde</c>
+            </r>
+            <r>
+              <c>CW</c>
+              <c>Curaçao</c>
+            </r>
+            <r>
+              <c>CX</c>
+              <c>Christmas Island</c>
+            </r>
+            <r>
+              <c>CY</c>
+              <c>Cyprus</c>
+            </r>
+            <r>
+              <c>CZ</c>
+              <c>Czech Republic</c>
+            </r>
+            <r>
+              <c>DE</c>
+              <c>Germany</c>
+            </r>
+            <r>
+              <c>DJ</c>
+              <c>Djibouti</c>
+            </r>
+            <r>
+              <c>DK</c>
+              <c>Denmark</c>
+            </r>
+            <r>
+              <c>DM</c>
+              <c>Dominica</c>
+            </r>
+            <r>
+              <c>DO</c>
+              <c>Dominican Republic</c>
+            </r>
+            <r>
+              <c>DZ</c>
+              <c>Algeria</c>
+            </r>
+            <r>
+              <c>EC</c>
+              <c>Ecuador</c>
+            </r>
+            <r>
+              <c>EE</c>
+              <c>Estonia</c>
+            </r>
+            <r>
+              <c>EG</c>
+              <c>Egypt</c>
+            </r>
+            <r>
+              <c>EH</c>
+              <c>Western Sahara</c>
+            </r>
+            <r>
+              <c>ER</c>
+              <c>Eritrea</c>
+            </r>
+            <r>
+              <c>ES</c>
+              <c>Spain</c>
+            </r>
+            <r>
+              <c>ET</c>
+              <c>Ethiopia</c>
+            </r>
+            <r>
+              <c>FI</c>
+              <c>Finland</c>
+            </r>
+            <r>
+              <c>FJ</c>
+              <c>Fiji</c>
+            </r>
+            <r>
+              <c>FK</c>
+              <c>Falkland Islands (Malvinas)</c>
+            </r>
+            <r>
+              <c>FM</c>
+              <c>Micronesia, Federated States of</c>
+            </r>
+            <r>
+              <c>FO</c>
+              <c>Faroe Islands</c>
+            </r>
+            <r>
+              <c>FR</c>
+              <c>France</c>
+            </r>
+            <r>
+              <c>GA</c>
+              <c>Gabon</c>
+            </r>
+            <r>
+              <c>GB</c>
+              <c>United Kingdom of Great Britain and Northern Ireland</c>
+            </r>
+            <r>
+              <c>GD</c>
+              <c>Grenada</c>
+            </r>
+            <r>
+              <c>GE</c>
+              <c>Georgia</c>
+            </r>
+            <r>
+              <c>GF</c>
+              <c>French Guiana</c>
+            </r>
+            <r>
+              <c>GG</c>
+              <c>Guernsey</c>
+            </r>
+            <r>
+              <c>GH</c>
+              <c>Ghana</c>
+            </r>
+            <r>
+              <c>GI</c>
+              <c>Gibraltar</c>
+            </r>
+            <r>
+              <c>GL</c>
+              <c>Greenland</c>
+            </r>
+            <r>
+              <c>GM</c>
+              <c>Gambia</c>
+            </r>
+            <r>
+              <c>GN</c>
+              <c>Guinea</c>
+            </r>
+            <r>
+              <c>GP</c>
+              <c>Guadeloupe</c>
+            </r>
+            <r>
+              <c>GQ</c>
+              <c>Equatorial Guinea</c>
+            </r>
+            <r>
+              <c>GR</c>
+              <c>Greece</c>
+            </r>
+            <r>
+              <c>GS</c>
+              <c>South Georgia and The South Sandwich Islands</c>
+            </r>
+            <r>
+              <c>GT</c>
+              <c>Guatemala</c>
+            </r>
+            <r>
+              <c>GU</c>
+              <c>Guam</c>
+            </r>
+            <r>
+              <c>GW</c>
+              <c>Guinea-Bissau</c>
+            </r>
+            <r>
+              <c>GY</c>
+              <c>Guyana</c>
+            </r>
+            <r>
+              <c>HK</c>
+              <c>Hong Kong</c>
+            </r>
+            <r>
+              <c>HM</c>
+              <c>Heard Island and McDonald Islands</c>
+            </r>
+            <r>
+              <c>HN</c>
+              <c>Honduras</c>
+            </r>
+            <r>
+              <c>HR</c>
+              <c>Croatia</c>
+            </r>
+            <r>
+              <c>HT</c>
+              <c>Haiti</c>
+            </r>
+            <r>
+              <c>HU</c>
+              <c>Hungary</c>
+            </r>
+            <r>
+              <c>ID</c>
+              <c>Indonesia</c>
+            </r>
+            <r>
+              <c>IE</c>
+              <c>Ireland</c>
+            </r>
+            <r>
+              <c>IL</c>
+              <c>Israel</c>
+            </r>
+            <r>
+              <c>IM</c>
+              <c>Isle of Man</c>
+            </r>
+            <r>
+              <c>IN</c>
+              <c>India</c>
+            </r>
+            <r>
+              <c>IO</c>
+              <c>British Indian Ocean Territory</c>
+            </r>
+            <r>
+              <c>IQ</c>
+              <c>Iraq</c>
+            </r>
+            <r>
+              <c>IR</c>
+              <c>Iran</c>
+            </r>
+            <r>
+              <c>IS</c>
+              <c>Iceland</c>
+            </r>
+            <r>
+              <c>IT</c>
+              <c>Italy</c>
+            </r>
+            <r>
+              <c>JM</c>
+              <c>Jamaica</c>
+            </r>
+            <r>
+              <c>JO</c>
+              <c>Jordan</c>
+            </r>
+            <r>
+              <c>JP</c>
+              <c>Japan</c>
+            </r>
+            <r>
+              <c>KE</c>
+              <c>Kenya</c>
+            </r>
+            <r>
+              <c>KG</c>
+              <c>Kyrgyzstan</c>
+            </r>
+            <r>
+              <c>KH</c>
+              <c>Cambodia</c>
+            </r>
+            <r>
+              <c>KI</c>
+              <c>Kiribati</c>
+            </r>
+            <r>
+              <c>KM</c>
+              <c>Comoros</c>
+            </r>
+            <r>
+              <c>KN</c>
+              <c>Saint Kitts and Nevis</c>
+            </r>
+            <r>
+              <c>KP</c>
+              <c>Korea, Democratic People's Republic of</c>
+            </r>
+            <r>
+              <c>KR</c>
+              <c>Korea, Republic of</c>
+            </r>
+            <r>
+              <c>KW</c>
+              <c>Kuwait</c>
+            </r>
+            <r>
+              <c>KY</c>
+              <c>Cayman Islands</c>
+            </r>
+            <r>
+              <c>KZ</c>
+              <c>Kazakhstan</c>
+            </r>
+            <r>
+              <c>LA</c>
+              <c>Lao People's Democratic Republic</c>
+            </r>
+            <r>
+              <c>LB</c>
+              <c>Lebanon</c>
+            </r>
+            <r>
+              <c>LC</c>
+              <c>Saint Lucia</c>
+            </r>
+            <r>
+              <c>LI</c>
+              <c>Liechtenstein</c>
+            </r>
+            <r>
+              <c>LK</c>
+              <c>Sri Lanka</c>
+            </r>
+            <r>
+              <c>LR</c>
+              <c>Liberia</c>
+            </r>
+            <r>
+              <c>LS</c>
+              <c>Lesotho</c>
+            </r>
+            <r>
+              <c>LT</c>
+              <c>Lithuania</c>
+            </r>
+            <r>
+              <c>LU</c>
+              <c>Luxembourg</c>
+            </r>
+            <r>
+              <c>LV</c>
+              <c>Latvia</c>
+            </r>
+            <r>
+              <c>LY</c>
+              <c>Libya</c>
+            </r>
+            <r>
+              <c>MA</c>
+              <c>Morocco</c>
+            </r>
+            <r>
+              <c>MC</c>
+              <c>Monaco</c>
+            </r>
+            <r>
+              <c>MD</c>
+              <c>Moldova, Republic of</c>
+            </r>
+            <r>
+              <c>ME</c>
+              <c>Montenegro</c>
+            </r>
+            <r>
+              <c>MF</c>
+              <c>Saint Martin (French part)</c>
+            </r>
+            <r>
+              <c>MG</c>
+              <c>Madagascar</c>
+            </r>
+            <r>
+              <c>MH</c>
+              <c>Marshall Islands</c>
+            </r>
+            <r>
+              <c>MK</c>
+              <c>Macedonia, Republic of</c>
+            </r>
+            <r>
+              <c>ML</c>
+              <c>Mali</c>
+            </r>
+            <r>
+              <c>MM</c>
+              <c>Myanmar</c>
+            </r>
+            <r>
+              <c>MN</c>
+              <c>Mongolia</c>
+            </r>
+            <r>
+              <c>MO</c>
+              <c>Macao</c>
+            </r>
+            <r>
+              <c>MP</c>
+              <c>Northern Mariana Islands</c>
+            </r>
+            <r>
+              <c>MQ</c>
+              <c>Martinique</c>
+            </r>
+            <r>
+              <c>MR</c>
+              <c>Mauritania</c>
+            </r>
+            <r>
+              <c>MS</c>
+              <c>Montserrat</c>
+            </r>
+            <r>
+              <c>MT</c>
+              <c>Malta</c>
+            </r>
+            <r>
+              <c>MU</c>
+              <c>Mauritius</c>
+            </r>
+            <r>
+              <c>MV</c>
+              <c>Maldives</c>
+            </r>
+            <r>
+              <c>MW</c>
+              <c>Malawi</c>
+            </r>
+            <r>
+              <c>MX</c>
+              <c>Mexico</c>
+            </r>
+            <r>
+              <c>MY</c>
+              <c>Malaysia</c>
+            </r>
+            <r>
+              <c>MZ</c>
+              <c>Mozambique</c>
+            </r>
+            <r>
+              <c>NA</c>
+              <c>Namibia</c>
+            </r>
+            <r>
+              <c>NC</c>
+              <c>New Caledonia</c>
+            </r>
+            <r>
+              <c>NE</c>
+              <c>Niger</c>
+            </r>
+            <r>
+              <c>NF</c>
+              <c>Norfolk Island</c>
+            </r>
+            <r>
+              <c>NG</c>
+              <c>Nigeria</c>
+            </r>
+            <r>
+              <c>NI</c>
+              <c>Nicaragua</c>
+            </r>
+            <r>
+              <c>NL</c>
+              <c>Netherlands</c>
+            </r>
+            <r>
+              <c>NO</c>
+              <c>Norway</c>
+            </r>
+            <r>
+              <c>NP</c>
+              <c>Nepal</c>
+            </r>
+            <r>
+              <c>NR</c>
+              <c>Nauru</c>
+            </r>
+            <r>
+              <c>NU</c>
+              <c>Niue</c>
+            </r>
+            <r>
+              <c>NZ</c>
+              <c>New Zealand</c>
+            </r>
+            <r>
+              <c>OM</c>
+              <c>Oman</c>
+            </r>
+            <r>
+              <c>PA</c>
+              <c>Panama</c>
+            </r>
+            <r>
+              <c>PE</c>
+              <c>Peru</c>
+            </r>
+            <r>
+              <c>PF</c>
+              <c>French Polynesia</c>
+            </r>
+            <r>
+              <c>PG</c>
+              <c>Papua New Guinea</c>
+            </r>
+            <r>
+              <c>PH</c>
+              <c>Philippines</c>
+            </r>
+            <r>
+              <c>PK</c>
+              <c>Pakistan</c>
+            </r>
+            <r>
+              <c>PL</c>
+              <c>Poland</c>
+            </r>
+            <r>
+              <c>PM</c>
+              <c>Saint Pierre and Miquelon</c>
+            </r>
+            <r>
+              <c>PN</c>
+              <c>Pitcairn Islands</c>
+            </r>
+            <r>
+              <c>PR</c>
+              <c>Puerto Rico</c>
+            </r>
+            <r>
+              <c>PS</c>
+              <c>Palestine, State of</c>
+            </r>
+            <r>
+              <c>PT</c>
+              <c>Portugal</c>
+            </r>
+            <r>
+              <c>PW</c>
+              <c>Palau</c>
+            </r>
+            <r>
+              <c>PY</c>
+              <c>Paraguay</c>
+            </r>
+            <r>
+              <c>QA</c>
+              <c>Qatar</c>
+            </r>
+            <r>
+              <c>RE</c>
+              <c>Reunion</c>
+            </r>
+            <r>
+              <c>RO</c>
+              <c>Romania</c>
+            </r>
+            <r>
+              <c>RS</c>
+              <c>Serbia</c>
+            </r>
+            <r>
+              <c>RU</c>
+              <c>Russian Federation</c>
+            </r>
+            <r>
+              <c>RW</c>
+              <c>Rwanda</c>
+            </r>
+            <r>
+              <c>SA</c>
+              <c>Saudi Arabia</c>
+            </r>
+            <r>
+              <c>SB</c>
+              <c>Solomon Islands</c>
+            </r>
+            <r>
+              <c>SC</c>
+              <c>Seychelles</c>
+            </r>
+            <r>
+              <c>SD</c>
+              <c>Sudan</c>
+            </r>
+            <r>
+              <c>SE</c>
+              <c>Sweden</c>
+            </r>
+            <r>
+              <c>SG</c>
+              <c>Singapore</c>
+            </r>
+            <r>
+              <c>SH</c>
+              <c>Saint Helena, Ascension and Tristan da Cunha</c>
+            </r>
+            <r>
+              <c>SI</c>
+              <c>Slovenia</c>
+            </r>
+            <r>
+              <c>SJ</c>
+              <c>Svalbard and Jan Mayen</c>
+            </r>
+            <r>
+              <c>SK</c>
+              <c>Slovakia</c>
+            </r>
+            <r>
+              <c>SL</c>
+              <c>Sierra Leone</c>
+            </r>
+            <r>
+              <c>SM</c>
+              <c>San Marino</c>
+            </r>
+            <r>
+              <c>SN</c>
+              <c>Senegal</c>
+            </r>
+            <r>
+              <c>SO</c>
+              <c>Somalia</c>
+            </r>
+            <r>
+              <c>SR</c>
+              <c>Suriname</c>
+            </r>
+            <r>
+              <c>SS</c>
+              <c>South Sudan</c>
+            </r>
+            <r>
+              <c>ST</c>
+              <c>Sao Tome and Principe</c>
+            </r>
+            <r>
+              <c>SV</c>
+              <c>El Salvador</c>
+            </r>
+            <r>
+              <c>SX</c>
+              <c>Sint Maarten (Dutch part)</c>
+            </r>
+            <r>
+              <c>SY</c>
+              <c>Syrian Arab Republic</c>
+            </r>
+            <r>
+              <c>SZ</c>
+              <c>Swaziland</c>
+            </r>
+            <r>
+              <c>TA</c>
+              <c>Tristan da Cunha</c>
+            </r>
+            <r>
+              <c>TC</c>
+              <c>Turks and Caicos Islands</c>
+            </r>
+            <r>
+              <c>TD</c>
+              <c>Chad</c>
+            </r>
+            <r>
+              <c>TF</c>
+              <c>French Southern Territories</c>
+            </r>
+            <r>
+              <c>TG</c>
+              <c>Togo</c>
+            </r>
+            <r>
+              <c>TH</c>
+              <c>Thailand</c>
+            </r>
+            <r>
+              <c>TJ</c>
+              <c>Tajikistan</c>
+            </r>
+            <r>
+              <c>TK</c>
+              <c>Tokelau</c>
+            </r>
+            <r>
+              <c>TL</c>
+              <c>Timor-Leste</c>
+            </r>
+            <r>
+              <c>TM</c>
+              <c>Turkmenistan</c>
+            </r>
+            <r>
+              <c>TN</c>
+              <c>Tunisia</c>
+            </r>
+            <r>
+              <c>TO</c>
+              <c>Tonga</c>
+            </r>
+            <r>
+              <c>TR</c>
+              <c>Turkey</c>
+            </r>
+            <r>
+              <c>TT</c>
+              <c>Trinidad and Tobago</c>
+            </r>
+            <r>
+              <c>TV</c>
+              <c>Tuvalu</c>
+            </r>
+            <r>
+              <c>TW</c>
+              <c>Taiwan, Province of China</c>
+            </r>
+            <r>
+              <c>TZ</c>
+              <c>Tanzania, United Republic of</c>
+            </r>
+            <r>
+              <c>UA</c>
+              <c>Ukraine</c>
+            </r>
+            <r>
+              <c>UG</c>
+              <c>Uganda</c>
+            </r>
+            <r>
+              <c>UM</c>
+              <c>United States Minor Outlying Islands</c>
+            </r>
+            <r>
+              <c>US</c>
+              <c>United States</c>
+            </r>
+            <r>
+              <c>UY</c>
+              <c>Uruguay</c>
+            </r>
+            <r>
+              <c>UZ</c>
+              <c>Uzbekistan</c>
+            </r>
+            <r>
+              <c>VA</c>
+              <c>Vatican City State</c>
+            </r>
+            <r>
+              <c>VC</c>
+              <c>Saint Vincent and The Grenadines</c>
+            </r>
+            <r>
+              <c>VE</c>
+              <c>Venezuela, Bolivarian Republic of</c>
+            </r>
+            <r>
+              <c>VG</c>
+              <c>Virgin Islands, British</c>
+            </r>
+            <r>
+              <c>VI</c>
+              <c>Virgin Islands, U.S.</c>
+            </r>
+            <r>
+              <c>VN</c>
+              <c>Vietnam</c>
+            </r>
+            <r>
+              <c>VU</c>
+              <c>Vanuatu</c>
+            </r>
+            <r>
+              <c>WF</c>
+              <c>Wallis and Futuna</c>
+            </r>
+            <r>
+              <c>WS</c>
+              <c>Samoa</c>
+            </r>
+            <r>
+              <c>XK</c>
+              <c>Kosovo</c>
+            </r>
+            <r>
+              <c>YE</c>
+              <c>Yemen</c>
+            </r>
+            <r>
+              <c>YT</c>
+              <c>Mayotte</c>
+            </r>
+            <r>
+              <c>ZA</c>
+              <c>South Africa</c>
+            </r>
+            <r>
+              <c>ZM</c>
+              <c>Zambia</c>
+            </r>
+            <r>
+              <c>ZW</c>
+              <c>Zimbabwe</c>
+            </r>
+            <r>
+              <c>ZZ</c>
+              <c>Unknown Region</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Pays codes</AnnotationText>
+          <DefaultAnnotationText>Pays Codes</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="54">challenge_223\4-nuclear_power_plants.json</File>
+          <FormatSpecificOptions>
+            <SingleField>True</SingleField>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>centrales_nucléaires.json</AnnotationText>
+          <DefaultAnnotationText>4-nuclear_power_plants.json</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="JSON_Name" size="1073741823" source="JSON_Input: " type="V_WString" />
+            <Field name="JSON_ValueString" size="1073741823" source="JSON_Input: " type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="906" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">challenge_223\sortie.yxdb</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Sortie.yxdb</AnnotationText>
+          <DefaultAnnotationText>sortie.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BoundingRect" size="2147483647" source="Map:" type="SpatialObj" />
+            <Field name="Layout" size="2147483647" source="Report:Layout:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Tile.Tile">
+        <Position x="234" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Method>EqualRecords</Method>
+          <EqualRecords>
+            <NumTiles value="788" />
+            <SortLocale>1036</SortLocale>
+          </EqualRecords>
+          <GroupFields orderChanged="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTile" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="450" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Tile_Num" />
+          </GroupFields>
+          <HeaderField field="JSON_Name" />
+          <DataField field="JSON_ValueString" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Tile_Num" source="CrossTab:Group:First:" type="Int16" />
+            <Field name="Capacity" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="ConstructionStartAt" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="CountryCode" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="Id" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="LastUpdatedAt" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="Latitude" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="Longitude" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="Name" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="OperationalFrom" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="OperationalTo" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="ReactorModel" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="ReactorTypeId" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="Source" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+            <Field name="StatusId" size="1073741823" source="Formula: IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Tile_Num" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="354" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([JSON_Name],&quot;\d+\.&quot;,&quot;&quot;)" field="JSON_Name" size="1073741823" type="V_WString" />
+            <FormulaField expression="IIF([JSON_Name]=&quot;Capacity&quot; and (IsNull([JSON_ValueString]) or IsEmpty([JSON_ValueString])),0,[JSON_ValueString])" field="JSON_ValueString" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Nettoyae du champ JSON_Name</AnnotationText>
+          <DefaultAnnotationText>JSON_Name = REGEX_Replace([JSON_Name],"\d+\.","")
+JSON_ValueString = IIF([JSON_N...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="558" y="702" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="CountryCode" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Pays code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Tile_Num" selected="False" input="Left_" />
+                <SelectField field="Right_Pays code" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Rapatriement des noms de pays</AnnotationText>
+          <DefaultAnnotationText>Rapatriement des noms de pays</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="726" y="714" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="StatusId" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Statut Code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Rapatriement des status</AnnotationText>
+          <DefaultAnnotationText>Rapatriement des status</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="210" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Statut Code" selected="True" type="V_String" size="3" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="834" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="ReactorTypeId" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Type Code" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_Capacity" selected="True" input="Left_" type="Double" size="8" />
+                <SelectField field="Right_Type Code" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Rapatriement du type de réacteur et de la description de celui-ci</AnnotationText>
+          <DefaultAnnotationText>Rapatriement du type de réacteur et de la description de celui-ci</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="61">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="210" y="1002" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Type Code" selected="True" type="String" size="3" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="942" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Statut] in ("Opérationnel","En construction","Prévu")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Suppression des statuts non demandés</AnnotationText>
+          <DefaultAnnotationText>[Statut] in ("Opérationnel","En construction","Prévu")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="71">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1650" y="870" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\egakosso\AppData\Local\Temp\Engine_14012_a15ef6496045412ead905dae7828eaad_\Engine_25012_b234efcd2d0e41f88fd7036319dd1b09_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Rapport</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="73">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1590" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="74">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerLayout.PortfolioComposerLayout">
+        <Position x="1710" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupingMode>PerRecord</GroupingMode>
+          <PreserveSourceFields value="False" />
+          <Orientation>V</Orientation>
+          <Separator>Continuous</Separator>
+          <Width>100%</Width>
+          <Height />
+          <BorderStyle Enabled="false" Color="#000000" Width="2" />
+          <SeparatorStyle Enabled="false" Color="#000000" Width="1" />
+          <Padding>0</Padding>
+          <LayoutFields orderChanged="False">
+            <Field name="Map" selected="True" Alignment="Center" />
+            <Field name="Table" selected="True" Alignment="Center" Width="" />
+          </LayoutFields>
+          <MergeIntoTable value="False" />
+          <SectionNameForGroup />
+          <SectionNameForAllRecords />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Mise en page verticale
+Chaque enregistrement individuel</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerLayoutPlugin" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1830" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\egakosso\AppData\Local\Temp\Engine_14012_a15ef6496045412ead905dae7828eaad_\Engine_25012_e66cd99adc7a402ab5fdfed14f62f543_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Rapport</DefaultTab>
+              <Hints>
+                <Map>
+                  <BaseMap>[Aucune carte de référence]</BaseMap>
+                </Map>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1109" y="665" width="337" height="133" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Map</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="63">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="1134" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="Longitude" fieldY="Latitude" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="64">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.ReportMap.ReportMap">
+            <Position x="1254" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TemporaryFileLocationXML>C:\Users\egakosso\AppData\Local\Temp\Engine_14012_a15ef6496045412ead905dae7828eaad_\Engine_25012_557b018f840a4617988659265c30c1b8_.xml</TemporaryFileLocationXML>
+              <IsMetric value="True" />
+              <ImageWidth>20</ImageWidth>
+              <ImageHeight>15</ImageHeight>
+              <ImageResolution>1</ImageResolution>
+              <ReferenceMap>Latest:CloudMade</ReferenceMap>
+              <BackgroundColor>#fdfeff</BackgroundColor>
+              <DropShadow>False</DropShadow>
+              <ScaleUnits>Kilometers</ScaleUnits>
+              <ExpandExtent>10</ExpandExtent>
+              <MinimumWidth>1</MinimumWidth>
+              <DataConnections>
+                <DataConnection name="#1">
+                  <ConnectionType>IncomingConnection</ConnectionType>
+                  <Connection>#1</Connection>
+                  <FileName />
+                  <SpatialObj />
+                  <GroupField />
+                  <ThemeField>Statut</ThemeField>
+                  <LabelField />
+                </DataConnection>
+              </DataConnections>
+              <Layers>
+                <Layer name="1" order="0">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="False" />
+                  <DisplayName>#1</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle />
+                  <ThemeStyle ColorMethod="Map" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="3" SpecificValues="En construction&#xD;&#xA;Opérationnel&#xD;&#xA;Prévu&#xD;&#xA;" StartColor="#0000ff" TileMethod="IndividualValue" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                </Layer>
+                <Layer name="Base Layers - Points" order="1">
+                  <DisplayName>Base Layers - Points</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Lines" order="2">
+                  <DisplayName>Base Layers - Lines</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="Base Layers - Polygons" order="3">
+                  <DisplayName>Base Layers - Polygons</DisplayName>
+                  <DataConnection />
+                  <LayerType>Placeholder</LayerType>
+                  <ShowLabel value="False" />
+                </Layer>
+                <Layer name="2" order="1001">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="True" />
+                  <DisplayName><![CDATA[En construction
+]]></DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#00ff40" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                  <ParentLayer>1</ParentLayer>
+                  <ThemeBandNumber>1</ThemeBandNumber>
+                </Layer>
+                <Layer name="3" order="1002">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="True" />
+                  <DisplayName><![CDATA[Opérationnel
+]]></DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#008040" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                  <ParentLayer>1</ParentLayer>
+                  <ThemeBandNumber>2</ThemeBandNumber>
+                </Layer>
+                <Layer name="4" order="1003">
+                  <LayerType>Points</LayerType>
+                  <isBaseLayer value="False" />
+                  <isReorderedBaseLayer value="False" />
+                  <isRestlyedBaseLayer value="False" />
+                  <baseLabelOverriden value="False" />
+                  <isThemeLayer value="True" />
+                  <DisplayName>Prévu</DisplayName>
+                  <DataConnection>#1</DataConnection>
+                  <ShowInLegend value="True" />
+                  <ZoomToLayer value="True" />
+                  <Disable value="False" />
+                  <PointStyle Color="#ff0000" />
+                  <ThemeStyle ColorMethod="Ramp" EndColor="#ff0000" ManualTiles="" NoneSpecificValuesAction="Color" NumTiles="5" SpecificValues="" StartColor="#0000ff" TileMethod="SmartTile" UniqueColors="#dc143c,#6495ed,#f0e68c,#228b22,#a9a9a9,#ffa500,#ba55d3,#a0522d,#ff69b4,#4b0082,#d3d3d3,#9acd32,#00ffff,#808000,#ffb6c1" UpperCutoffIncludedExcluded="Excluded" />
+                  <LabelStyle Disabled="false" />
+                  <ParentLayer>1</ParentLayer>
+                  <ThemeBandNumber>3</ThemeBandNumber>
+                </Layer>
+              </Layers>
+              <Legend>
+                <LegendStyle Position="Right" UseCommaSeparators="false" />
+              </Legend>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxReportMap" />
+        </Node>
+        <Node ToolID="65">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1362" y="714" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\egakosso\AppData\Local\Temp\Engine_14012_a15ef6496045412ead905dae7828eaad_\Engine_25012_f6f69eb4da6d4142b8a61bebb64b3b1e_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Rapport</DefaultTab>
+                  <Hints>
+                    <Map>
+                      <BaseMap>[Aucune carte de référence]</BaseMap>
+                    </Map>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="72">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1109" y="821" width="445" height="240" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Tableau</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="67">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1242" y="870" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Pays" action="GroupBy" rename="Pays" />
+                <SummarizeField field="Statut" action="Count" rename="Nombre de réacteurs opérationnels" />
+                <SummarizeField field="Capacity" action="Sum" rename="Capacité totale" />
+                <SummarizeField field="Description" action="Mode" rename="Description" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Synthèse par pays du nombre de réacteurs opérationnels, de leur capacité totale et leur description</AnnotationText>
+              <DefaultAnnotationText>Synthèse par pays du nombre de réacteurs opérationnels, de leur capacité totale et leur description</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="68">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1134" y="882" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Statut] = "Opérationnel"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Statut] = "Opérationnel"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="1362" y="870" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="1036">
+                <Field field="Capacité totale" order="Descending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Tri par capacités totales les plus élevées</AnnotationText>
+              <DefaultAnnotationText>Capacité totale - Décroissant</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+            <Position x="1446" y="870" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TableMode>Basic</TableMode>
+              <GroupingFields orderChanged="False" />
+              <Width>831</Width>
+              <ShowHeader value="True" />
+              <ShowBarGraph value="False" />
+              <TableFields orderChanged="False">
+                <Field name="Pays" selected="True" Alignment="Left" Width="755" />
+                <Field name="Nombre de réacteurs opérationnels" selected="True" Alignment="Right" />
+                <Field name="Capacité totale" selected="True" Alignment="Right" />
+                <Field name="Description" selected="True" Alignment="Left" Width="377" />
+                <Field name="*Unknown" selected="True" Alignment="Right" />
+              </TableFields>
+              <TableStyles>
+                <Style Name="Data" Font="Arial" Size="8" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1" />
+                <Style Name="Header" Font="Arial" Size="10" TextColor="#000000" BackColor="#dbdbdb" />
+                <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)" />
+                <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000" />
+              </TableStyles>
+              <StyleRules />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Table de base</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="104" y="1532" width="656" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#0d2345" BorderColor="#ffffff" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="114" y="1566" width="636" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.”</Text>
+              <Font name="Times New Roman" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="59" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="Output" />
+      <Destination ToolID="55" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="55" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Join" />
+      <Destination ToolID="57" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="59" Connection="Output" />
+      <Destination ToolID="57" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Join" />
+      <Destination ToolID="60" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="61" Connection="Output" />
+      <Destination ToolID="60" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Join" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="63" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="True" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="73" Connection="Join" />
+      <Destination ToolID="74" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="63" Connection="Output" />
+      <Destination ToolID="64" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="64" Connection="Output" />
+      <Destination ToolID="73" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="73" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="67" Connection="Output" />
+      <Destination ToolID="69" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="68" Connection="True" />
+      <Destination ToolID="67" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>defi_26_pour_commencer</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4e38ea20-24fd-4226-987f-b56a795143dc" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="4e38ea20-24fd-4226-987f-b56a795143dc" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
